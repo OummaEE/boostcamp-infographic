@@ -11,22 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- 
     PLANERING & MOTIVERING (Uppdaterad)
-    Denna infografik visualiserar den uppdaterade "Tankekartan" för BoostCamp-projektet.
-    Nya funktioner med Gemini API för LLM-anrop har lagts till för idégenerering.
+    Denna infografik visualiserar den uppdaterade "Tankekartan" för BoostCamp-projektet, nu med Gemini API-integration.
 
     BERÄTTELSE & STRUKTUR:
     1.  Header: Titel och introduktion.
-    2.  Nivå 1 (Kärnledarskap & Gemensam Vision): Presenterar Jane, Anette och Nerine som jämbördiga strategiska ledare med specifika ansvarsområden. Donut-diagrammet visar projektets kärnprinciper som delas av ledningen.
+    2.  Nivå 1 (Kärnledarskap & Gemensam Vision): Presenterar Jane, Anette och Nerine som jämbördiga strategiska ledare med specifika ansvarsområden. Donut-diagrammet visar projektets kärnprinciper.
     3.  Nivå 2 (Nyckelpartners & Kompletterande Kompetenser): Presenterar Ksenia och Fredrik som avgörande stöd i specifika delar.
-    4.  Nivå 3 (Stödjande Nätverk): Visar hur Janes nätverk integreras och fördelas inom teamet.
-    5.  Ekosystemflöde: Ett flödesdiagram byggt med HTML/CSS som visuellt förstärker den jämlika ledningen och ansvarsfördelningen.
-    6.  Nivå 4 (Idégenerering med AI): Ny sektion för interaktion med LLM för att generera idéer relaterade till BoostCamp.
+    4.  Ekosystemflöde & Nätverk: Ett flödesdiagram byggt med HTML/CSS som visuellt förstärker den jämlika ledningen och ansvarsfördelningen.
+    5.  Idégenerering med AI: Ny interaktiv sektion för att generera idéer med Gemini API.
 
     VISUALISERINGAR (INGA SVG / INGA MERMAID JS):
-    -   Kärnprinciper: Donut Chart (Chart.js) - Mål: Informera. Visar kompositionen av den delade visionen.
-    -   Organisatorisk struktur: Strukturerad HTML/CSS med Tailwind - Mål: Organisera. Använder profilerade kort och listor för att tydligt visa roller och relationer.
-    -   Ekosystemflöde: Strukturerad HTML/CSS med Tailwind (Flexbox & Borders) - Mål: Organisera. Visar relationer och hierarki utan komplexa bibliotek.
-    -   Idégenerering: Interaktiv textfält och svarsområde (LLM via Gemini API).
+    -   Kärnprinciper: Donut Chart (Chart.js) - Mål: Informera.
+    -   Organisatorisk struktur: Strukturerad HTML/CSS med Tailwind - Mål: Organisera.
+    -   Ekosystemflöde: Strukturerad HTML/CSS med Tailwind (Flexbox & Borders) - Mål: Organisera.
+    -   Idégenerering: Interaktivt formulär som anropar Gemini API.
 
     FÄRG PALETT: "Energetic & Playful"
     -   #FF6B6B (Vibrant Red/Pink)
@@ -57,10 +55,9 @@
                 height: 350px;
             }
         }
-        /* Style for the flow diagram boxes */
         .flow-box {
-            background-color: #FFD166; /* Yellow */
-            color: #073B4C; /* Dark Navy */
+            background-color: #FFD166;
+            color: #073B4C;
             padding: 1rem;
             border-radius: 0.75rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -107,64 +104,60 @@
 
     <div class="container mx-auto p-4 md:p-8">
         
-        <!-- HEADER -->
         <header class="text-center mb-16">
             <h1 class="text-4xl md:text-6xl font-black text-[#FFD166] mb-4">BoostCamp</h1>
             <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">En vision för innovation i naturen – här visualiseras organisationen och kompetenserna som driver projektet framåt.</p>
         </header>
 
-        <!-- KÄRNLEDARSKAP & GEMENSAM VISION (Ny Nivå 1) -->
         <section class="mb-20">
             <div class="bg-white/10 rounded-2xl p-8 text-center shadow-lg">
                 <h2 class="text-3xl font-bold mb-2 text-[#06D6A0]">Nivå 1: Kärnledarskap & Gemensam Vision</h2>
                 <p class="text-lg text-gray-300 mb-6">BoostCamp leds av en gemensam kärngrupp som tillsammans driver projektets strategiska utveckling och förverkligande.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-12">
-                    <!-- Jane's Card -->
                     <div class="bg-[#FFD166] text-[#073B4C] rounded-xl p-6 text-left shadow-lg">
                         <h3 class="text-2xl font-bold mb-4">Jane (Initiativtagare & Platsansvarig)</h3>
                         <p class="font-bold mb-2">Huvudansvar:</p>
                         <ul class="list-disc list-inside text-gray-800 space-y-1">
-                            <li>Strategisk vision för platsen (BoostCamp som fysisk destination)</li>
-                            <li>Konceptutveckling & design av lägertypen/fysiska platsen</li>
-                            <li>Affärsmodell & prototyputveckling för platsen</li>
-                            <li>Nätverk & projektledning (lokala leverantörer & platsrelaterad infrastruktur)</li>
-                            <li>Säkerställa CO2-neutralitet & hållbarhet på platsen</li>
+                            <li>Strategisk vision för *platsen*</li>
+                            <li>Konceptutveckling & design av *lägertypen*</li>
+                            <li>Affärsmodell & prototyputveckling för *platsen*</li>
+                            <li>Nätverk & projektledning (lokala leverantörer)</li>
+                            <li>Säkerställa CO2-neutralitet & hållbarhet</li>
+                            <li>Ansvar för offline-verksamhet på plats</li>
                         </ul>
                         <p class="font-bold mt-4 mb-2">Drivkraft:</p>
-                        <p class="text-gray-800">"Skapa en 'innovation world' i naturen, en 'connection space' där nya idéer och tankesätt föds."</p>
+                        <p class="text-gray-800">"Skapa en 'innovation world' i naturen."</p>
                     </div>
 
-                    <!-- Anette's Card -->
                     <div class="bg-[#FF6B6B] text-white rounded-xl p-6 text-left shadow-lg">
                         <h3 class="text-2xl font-bold mb-4">Anette (Strategi & Ekosystem)</h3>
                         <p class="font-bold mb-2">Huvudansvar:</p>
                         <ul class="list-disc list-inside text-gray-100 space-y-1">
-                            <li>Drivande kraft i ekosystemet av platshållare</li>
-                            <li>Utveckling av gemensam vision & strategi (bredare projekt)</li>
+                            <li>Drivande kraft i *ekosystemet* av platshållare</li>
+                            <li>Övergripande projektstrategi & expansion</li>
                             <li>Ansvarig för digitala plattformar & franchising</li>
-                            <li>Expertis inom innovationsprocesser & facilitering</li>
-                            <li>Programledning för BoostCamp-evenemang</li>
-                            <li>Hjälper till med projektimplementering (bred erfarenhet)</li>
+                            <li>Expertis inom innovationsprocesser</li>
+                            <li>Programledning för evenemang</li>
+                            <li>Ansvar för online-verksamhet & partnerskap</li>
                         </ul>
                         <p class="font-bold mt-4 mb-2">Nätverk:</p>
-                        <p class="text-gray-100">Kommuner, finansiärer (Spabank/Almi).</p>
+                        <p class="text-gray-100">Kommuner, finansiärer, startup-ekosystem.</p>
                     </div>
 
-                    <!-- Nerine's Card -->
                     <div class="bg-[#118AB2] text-white rounded-xl p-6 text-left shadow-lg">
                         <h3 class="text-2xl font-bold mb-4">Nerine (Innehåll & Kommunikation)</h3>
                         <p class="font-bold mb-2">Huvudansvar:</p>
                         <ul class="list-disc list-inside text-gray-100 space-y-1">
-                            <li>Expertis inom innehållsutveckling & programdesign för workshops</li>
-                            <li>Strategisk kommunikation</li>
+                            <li>Innehållsutveckling & programdesign</li>
+                            <li>Strategisk kommunikation & storytelling</li>
                             <li>Ansvarig för sociala medier & videoproduktion</li>
                             <li>Globalt perspektiv & e-learning</li>
-                            <li>Nätverk (akademia, Karolinska)</li>
-                            <li>Programledning (på BoostCamp, tillsammans med Anette)</li>
+                            <li>Programledning (tillsammans med Anette)</li>
+                            <li>Ansvar för online-innehåll & externa flöden</li>
                         </ul>
-                        <p class="font-bold mt-4 mb-2">Stöd:</p>
-                        <p class="text-gray-100">Ger strategisk rådgivning kring digitala flöden utanför platsen.</p>
+                        <p class="font-bold mt-4 mb-2">Nätverk:</p>
+                        <p class="text-gray-100">Akademin, forskningsinstitut, internationella partners.</p>
                     </div>
                 </div>
 
@@ -174,33 +167,28 @@
             </div>
         </section>
 
-        <!-- NYCKELPARTNERS & KOMPLETTERANDE KOMPETENSER -->
         <section class="mb-20">
             <h2 class="text-3xl font-bold text-center mb-8 text-[#06D6A0]">Nivå 2: Nyckelpartners & Kompletterande Kompetenser</h2>
             <p class="text-lg text-gray-300 text-center mb-6 max-w-3xl mx-auto">Dessa partners bidrar med specialiserade kompetenser som berikar och stärker BoostCamps unika erbjudande.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Ksenia -->
                 <div class="bg-white/10 rounded-2xl p-6 shadow-lg md:col-span-2">
                      <h3 class="text-2xl font-bold mb-4 text-[#FFD166]">Ksenia & PURPUR Agency (Kreativ Partner) 🎨</h3>
-                     <p class="mb-4 text-gray-300">En värdefull och kompletterande partner som berikar den fysiska platsen med unika, upplevelsebaserade koncept. Ksenias roll är att tillföra kreativ design, utveckla banbrytande evenemang och göra platsen mer visuell och inspirerande.</p>
+                     <p class="mb-4 text-gray-300">En värdefull och **kompletterande partner** som berikar den fysiska platsen med unika, upplevelsebaserade koncept.</p>
                      <p class="font-bold">Exempel på bidrag:</p>
                      <p class="text-gray-300">"Art+AI+Musik" upplevelser, interaktiva installationer, neonkonst, visuell camp-design.</p>
                 </div>
-                <!-- Fredrik -->
                 <div class="bg-white/10 rounded-2xl p-6 shadow-lg md:col-span-2">
                      <h3 class="text-2xl font-bold mb-4 text-white">Fredrik (Expert på naturmiljö & säkerhet) 🏕️</h3>
-                     <p class="text-gray-300">Med gedigen scouterfarenhet säkerställer Fredrik att vistelsen i naturen är trygg, bekväm och funktionell för alla deltagare. Han bidrar med expertis kring regler och rutiner för campet.</p>
+                     <p class="text-gray-300">Säkerställer att vistelsen i naturen är trygg, bekväm och funktionell för alla deltagare.</p>
                 </div>
             </div>
         </section>
         
-        <!-- ÖVRIGA NÄTVERK & FLÖDE -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-[#06D6A0]">Ekosystemets Flöde & Stödjande Nätverk</h2>
             <p class="text-lg text-gray-300 text-center mb-6 max-w-3xl mx-auto">BoostCamp opererar inom ett dynamiskt ekosystem där olika nätverk och kompetenser interagerar.</p>
              <div class="bg-white/10 rounded-2xl p-8 shadow-lg">
                 <div class="flex flex-col items-center">
-                    <!-- Core Leadership (Jane, Anette, Nerine) -->
                     <div class="flow-group mb-4">
                         <div class="flow-box bg-[#FFD166] text-[#073B4C]"><p class="font-black text-lg">JANE</p><p class="text-sm">(Platsansvarig)</p></div>
                         <div class="flow-box bg-[#FF6B6B] text-white"><p class="font-black text-lg">ANETTE</p><p class="text-sm">(Strategi & Ekosystem)</p></div>
@@ -209,31 +197,28 @@
                     
                     <div class="flow-arrow"></div>
 
-                    <!-- Main Operational Branches -->
                     <div class="flex flex-col md:flex-row gap-4 mb-4 w-full max-w-4xl">
                         <div class="flex-1 bg-white/20 p-4 rounded-xl text-center shadow-lg">
-                            <p class="font-bold text-lg mb-2 text-[#FFD166]">Jane: Platsens Utveckling & Drift</p>
+                            <p class="font-bold text-lg mb-2 text-[#FFD166]">Jane: Platsens Utveckling & Drift (Offline)</p>
                             <ul class="text-gray-300 list-disc list-inside text-sm">
-                                <li>Bygg/design/arkitektkontakter (direkt ansvar)</li>
-                                <li>Lokal nätverk & leverantörer</li>
+                                <li>Bygg/design/arkitektkontakter</li>
+                                <li>Lokala nätverk & leverantörer</li>
                                 <li>Fysisk infrastruktur & hållbarhet</li>
                             </ul>
                         </div>
                         <div class="flex-1 bg-white/20 p-4 rounded-xl text-center shadow-lg">
-                            <p class="font-bold text-lg mb-2 text-[#06D6A0]">Anette & Nerine: Strategi & Program</p>
+                            <p class="font-bold text-lg mb-2 text-[#06D6A0]">Anette & Nerine: Strategi & Program (Online)</p>
                             <ul class="text-gray-300 list-disc list-inside text-sm">
-                                <li>Akademi & Forskningskontakter (via Nerine)</li>
-                                <li>Finansiella kontakter (via Anette)</li>
-                                <li>Digitala plattformar & Online-strategi</li>
-                                <li>Programutformning & Innehållsleverans</li>
-                                <li>Bredare projektledning & expansion</li>
+                                <li>Akademi & Forskningskontakter</li>
+                                <li>Finansiella kontakter</li>
+                                <li>Digitala plattformar & expansion</li>
+                                <li>Programutformning & innehållsleverans</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="flow-arrow"></div>
 
-                    <!-- Complementary Partners -->
                     <div class="bg-white/20 p-4 rounded-xl w-full max-w-2xl text-center mb-4">
                         <p class="font-bold text-lg mb-2 text-[#FFD166]">Stödjande Kompetenser (Nivå 2)</p>
                         <div class="flow-group">
@@ -244,23 +229,47 @@
                     
                     <div class="flow-arrow"></div>
 
-                     <!-- External Nätverk -->
                     <div class="bg-white/10 p-4 rounded-xl w-full max-w-2xl text-center">
                          <p class="font-bold text-lg mb-2 text-white">Externt Nätverk</p>
                          <ul class="text-gray-300 list-none space-y-1">
                             <li>🤝 Kommuner & Myndigheter</li>
                             <li>💼 Potentiella Investerare</li>
                             <li>🎓 Utbildningsinstitutioner</li>
-                            <li>📢 Media & Kommunikation</li>
                             <li>🌐 Det bredare ekosystemet av platshållare</li>
                          </ul>
                     </div>
-
                 </div>
              </div>
         </section>
 
-        
+        <!-- LLM IDEA GENERATION SECTION -->
+        <section class="mb-20">
+            <div class="bg-white/10 rounded-2xl p-8 shadow-lg">
+                <h2 class="text-3xl font-bold mb-6 text-[#06D6A0] text-center">Idégenerering med AI</h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto text-center">Använd vår AI-assistent för att brainstorma nya idéer för BoostCamp. Fråga om workshops, hållbarhetslösningar eller marknadsföringsstrategier!</p>
+                
+                <div class="mb-6">
+                    <label for="promptInput" class="block text-gray-300 text-lg font-bold mb-2">Din fråga eller idé:</label>
+                    <textarea id="promptInput" class="w-full p-4 rounded-lg bg-[#073B4C] text-white border border-[#118AB2] focus:outline-none focus:ring-2 focus:ring-[#FFD166] h-32" placeholder="T.ex. 'Ge mig 3 idéer för en hållbar workshop för ungdomar'"></textarea>
+                </div>
+                
+                <div class="text-center mb-8">
+                    <button id="generateIdeasBtn" class="bg-[#FF6B6B] hover:bg-[#FFD166] text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Generera Idéer
+                    </button>
+                </div>
+
+                <div id="loadingIndicator" class="hidden text-center">
+                    <div class="loading-spinner"></div>
+                    <p class="text-gray-300 mt-2">Genererar idéer...</p>
+                </div>
+
+                <div id="responseArea" class="hidden bg-[#073B4C] p-6 rounded-lg border border-[#06D6A0] shadow-md mt-8">
+                    <h3 class="text-2xl font-bold mb-4 text-[#FFD166]">Resultat från AI:</h3>
+                    <p id="llmResponse" class="text-gray-300 whitespace-pre-wrap"></p>
+                </div>
+            </div>
+        </section>
 
     </div>
 
@@ -283,7 +292,6 @@
             navy: '#073B4C'
         };
 
-        // Core Principles Donut Chart
         const corePrinciplesCtx = document.getElementById('corePrinciplesChart').getContext('2d');
         new Chart(corePrinciplesCtx, {
             type: 'doughnut',
@@ -305,19 +313,14 @@
                         position: 'bottom',
                         labels: {
                             color: 'white',
-                            font: {
-                                size: 14
-                            }
+                            font: { size: 14 }
                         }
                     },
                     title: {
                         display: true,
                         text: 'BoostCamps Kärnprinciper',
                         color: 'white',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        }
+                        font: { size: 18, weight: 'bold' }
                     },
                     tooltip: {
                         callbacks: {
@@ -328,7 +331,56 @@
             }
         });
 
-        
+        const promptInput = document.getElementById('promptInput');
+        const generateIdeasBtn = document.getElementById('generateIdeasBtn');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const responseArea = document.getElementById('responseArea');
+        const llmResponse = document.getElementById('llmResponse');
+
+        generateIdeasBtn.addEventListener('click', async () => {
+            const prompt = promptInput.value.trim();
+            if (!prompt) {
+                llmResponse.textContent = 'Vänligen skriv in en fråga eller idé.';
+                responseArea.classList.remove('hidden');
+                return;
+            }
+
+            loadingIndicator.classList.remove('hidden');
+            responseArea.classList.add('hidden');
+            llmResponse.textContent = '';
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `Context: This is for a project called BoostCamp, an innovative and sustainable nature retreat for young entrepreneurs. Question: ${prompt}` }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    llmResponse.textContent = text;
+                } else {
+                    llmResponse.textContent = 'Kunde inte generera idéer. Försök igen med en annan fråga.';
+                    console.error('Unexpected API response structure:', result);
+                }
+            } catch (error) {
+                llmResponse.textContent = `Ett fel uppstod: ${error.message}`;
+                console.error('Fetch error:', error);
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                responseArea.classList.remove('hidden');
+            }
+        });
     </script>
 </body>
 </html>
